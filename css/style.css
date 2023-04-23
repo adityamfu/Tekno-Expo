@@ -299,7 +299,7 @@ a.navbar-brand {
 .login_bt li a {
   float: left;
   font-size: 18px;
-  color: #001431;
+  color: #d40808;
   text-transform: uppercase;
   padding: 0px 0px 0px 50px;
 }
@@ -535,7 +535,7 @@ a.navbar-brand {
   width: 100%;
   float: left;
   padding: 10px;
-  border-radius: 0px 50px 0px 50px;
+  border-top-right-radius: 50px;
   padding-bottom: 55px;
 }
 
@@ -1039,117 +1039,8 @@ textarea#comment::placeholder {
   border-radius: 5px;
   text-transform: uppercase;
 }
-
 /* newsletter section end */
 
-/* testimonial section start */
-
-.customer_section {
-  width: 100%;
-  padding-bottom: 100px;
-  float: left;
-}
-
-.customer_taital {
-  width: 100%;
-  float: left;
-  font-size: 40px;
-  color: #001431;
-  font-weight: bold;
-  text-transform: uppercase;
-  text-align: center;
-}
-
-.customer_section_2 {
-  width: 100%;
-  float: left;
-  margin-top: 50px;
-}
-
-.box_main {
-  width: 100%;
-  float: left;
-  background-color: #ffffff;
-  padding: 0px 50px 0px 50px;
-}
-
-.customer_text {
-  width: 100%;
-  font-size: 14px;
-  color: #737372;
-  margin: 0 auto;
-}
-
-.quick_icon {
-  float: right;
-}
-
-.customer_main {
-  width: 100%;
-  margin-top: 50px;
-}
-
-.customer_left {
-  width: 30%;
-  float: left;
-}
-.customer_img > img {
-  width: 80%;
-  border-radius: 0px 20px 0px 20px;
-}
-
-.customer_right {
-  width: 70%;
-  float: left;
-  margin-top: 40px;
-}
-
-.customer_name {
-  width: 100%;
-  float: left;
-  font-size: 26px;
-  font-weight: bold;
-  color: #d40808;
-}
-
-.enim_text {
-  width: 100%;
-  float: left;
-  font-size: 16px;
-  color: #001431;
-  margin: 20px 0px 0px 0px;
-}
-
-#my_slider a.carousel-control-prev {
-  left: 30px;
-  top: 190px;
-}
-
-#my_slider a.carousel-control-next {
-  right: 30px;
-  top: 190px;
-}
-
-#my_slider .carousel-control-next,
-#my_slider .carousel-control-prev {
-  width: 55px;
-  height: 55px;
-  background: #001431;
-  opacity: 1;
-  font-size: 18px;
-  color: #ffffff;
-  border-radius: 0px 8px 0px 8px;
-}
-
-#my_slider .carousel-control-next:focus,
-#my_slider .carousel-control-next:hover,
-#my_slider .carousel-control-prev:focus,
-#my_slider .carousel-control-prev:hover {
-  color: #ffffff;
-  background-color: #d40808;
-}
-
-/* testimonial section end */
 .studies_taital {
   width: 100%;
   float: left;
