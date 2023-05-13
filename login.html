@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/responsive.css" />
+    <link rel="stylesheet" href="./css/login.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Sen:wght@400;700;800&display=swap" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Login User</title>
+  </head>
+  <body>
+    <div id="bg">
+      <nav>
+        <div class="navbar-brand"><a href="#">TEKNO EXPO</a></div>
+        <div class="navbar-icons">
+          <a href="#"><i class="fas fa-times"></i></a>
+        </div>
+      </nav>
+      <div id="login">
+        <div class="login-page">
+          <div class="form">
+            <form class="login-form" action="./index.html" method="post" target="_blank">
+              <h1>Log In</h1>
+              <label for="email">Email</label>
+              <input type="email" name="email" id="email" required />
+              <label for="password">Password</label>
+              <input type="password" name="password" id="password" required />
+              <input type="submit" value="Masuk" />
+              <p class="message">Already Have an Account? <a href="#">Sign Up</a></p>
+              <div class="logo">
+                <a href="#"><img src="./images/logo-uti.png" width="90" /></a>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div id="signin">
+        <div class="login-page">
+          <div class="form">
+            <form class="login-form" action="#login" method="post">
+              <h1>Sign Up</h1>
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required />
+              <label for="password">Password</label>
+              <input type="password" id="password" name="password" required />
+              <input type="submit" value="Sign In" />
+              <p class="message">Don't have an account? <a href="#">Log In</a></p>
+              <div class="logo">
+                <a href="#"><img src="./images/logo-uti.png" width="90" /></a>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      const signInLink = document.querySelector('.message a');
+      const loginPage = document.querySelector('#login');
+      const signInPage = document.querySelector('#signin');
+      const signUpLink = document.querySelector('#signin .message a');
+
+      // Sembunyikan halaman sign in saat halaman dimuat
+      signInPage.style.display = 'none';
+
+      signInLink.addEventListener('click', function (event) {
+        event.preventDefault();
+        loginPage.style.display = 'none';
+        signInPage.style.display = 'block';
+      });
+
+      signUpLink.addEventListener('click', function (event) {
+        event.preventDefault();
+        signInPage.style.display = 'none';
+        loginPage.style.display = 'block';
+      });
+
+      // Tampilkan halaman login saat halaman dimuat
+      loginPage.style.display = 'block';
+    </script>
+  </body>
+</html>

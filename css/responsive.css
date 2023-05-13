@@ -337,6 +337,10 @@
 }
 
 @media (max-width: 575px) {
+  * {
+    margin: 0;
+    padding: 0;
+  }
   #banner_slider a.carousel-control-prev {
     display: none;
   }
@@ -514,5 +518,17 @@
     flex: 0 0 auto;
     margin: 10px;
     width: 60%;
+  }
+
+  .login-form {
+    align-items: center;
+    justify-content: center;
+  }
+  .form {
+    position: absolute;
+    margin-top: 30em;
+    min-height: 50%;
+    margin: 2em;
+    margin-top: 10em;
   }
 }

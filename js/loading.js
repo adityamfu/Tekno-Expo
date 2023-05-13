@@ -22,3 +22,12 @@ document.addEventListener('DOMContentLoaded', function () {
     }, 5000);
   });
 });
+
+const dots = document.querySelectorAll('.loading-dot');
+let dotIndex = 0;
+
+setInterval(() => {
+  dots.forEach((dot) => (dot.style.opacity = '0.5'));
+  dots[dotIndex].style.opacity = '1';
+  dotIndex = (dotIndex + 1) % dots.length;
+}, 300);

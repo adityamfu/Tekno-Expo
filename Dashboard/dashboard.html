@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.6/css/line.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.1/css/bootstrap.min.css"
+      integrity="sha512-1OclSjT21tPJczXgD1DgDcEgZUYxsz0+jJX+R0XQyC3u26/sE6vMcaQbMvK0ViJNZ9s9hCFk6gjv20B9ZndGfQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Sen:wght@400;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="dashboard.css" />
+    <title>Dashboard</title>
+  </head>
+  <body>
+    <aside class="sidebar position-fixed top-0 left-0 overflow-auto h-100 float-left" id="show-side-navigation1">
+      <i class="fa-solid fa-bars close-aside d-md-none d-lg-none" data-close="show-side-navigation1"></i>
+      <div class="sidebar-header d-flex justify-content-center align-items-center px-3 py-4">
+        <img class="img-fluid" width="65" src="./ffd.jpeg" alt="profile" />
+        <div class="ms-2">
+          <h5 class="fs-6 mb-0">
+            <a class="text-decoration-none" href="#">Adityamfu</a>
+          </h5>
+          <p class="mt-1 mb-0">Admin</p>
+        </div>
+      </div>
+
+      <div class="search position-relative text-center px-4 py-3 mt-2">
+        <input type="text" class="form-control w-100 border-0 bg-transparent" placeholder="Search here" />
+        <i class="fa fa-search position-absolute d-block fs-6"></i>
+      </div>
+
+      <ul class="categories list-unstyled">
+        <li class="icon-container"><i class="fa-solid fa-house"></i> <a href="#"> Dashboard</a></li>
+        <li class="icon-container"><i class="fa-solid fa-folder"></i><a class="icon-container" href="#"> File manager</a></li>
+        <li class="has-dropdown">
+          <i class="fa-solid fa-calendar"></i><a href="#"> Pengingat</a>
+          <ul class="sidebar-dropdown list-unstyled">
+            <li><a href="#">Penjadwalan</a></li>
+            <li><a href="#">Data Kegiatan</a></li>
+          </ul>
+        </li>
+        <li class="has-dropdown">
+          <i class="fa-solid fa-chart-simple"></i><a href="#"> Charts</a>
+          <ul class="sidebar-dropdown list-unstyled">
+            <li><a href="#">Desain Web</a></li>
+            <li><a href="#">Pemrograman Mobile</a></li>
+            <li><a href="#">UI/UX</a></li>
+            <li><a href="#">CTF</a></li>
+          </ul>
+        </li>
+        <li class="has-dropdown">
+          <i class="fa-brands fa-redhat"></i><a href="#"> Kepanitiaan</a>
+          <ul class="sidebar-dropdown list-unstyled">
+            <li><a href="#">SK</a></li>
+            <li><a href="#">Format Otomatis</a></li>
+          </ul>
+        </li>
+        <li class="has-dropdown">
+          <i class="fa-solid fa-file-signature"></i><a href="#"> Laporan</a>
+          <ul class="sidebar-dropdown list-unstyled">
+            <li><a href="#">Desain Web</a></li>
+            <li><a href="#">Pemrograman Mobile</a></li>
+            <li><a href="#">UI/UX</a></li>
+            <li><a href="#">CTF</a></li>
+          </ul>
+        </li>
+        <li class="has-dropdown">
+          <i class="fa-solid fa-address-card"></i><a href="#"> Sertivikasi</a>
+          <ul class="sidebar-dropdown list-unstyled">
+            <li><a href="#">Desain Web</a></li>
+            <li><a href="#">Pemrograman Mobile</a></li>
+            <li><a href="#">UI/UX</a></li>
+            <li><a href="#">CTF</a></li>
+          </ul>
+        </li>
+        <li class="icon-container">
+          <i class="fa-regular fa-handshake"></i>
+          <a href="#"> Data Mitra</a>
+        </li>
+        <li class="icon-container">
+          <i class="fa-solid fa-gear"></i>
+          <a href="#"> Settings</a>
+        </li>
+        <li id="myDiv" class="icon-container">
+          <i class="fa-solid fa-right-from-bracket"></i>
+          <a href="#"> Log Out</a>
+        </li>
+      </ul>
+    </aside>
+
+    <section id="wrapper">
+      <nav class="navbar navbar-expand-md">
+        <div class="container-fluid mx-2">
+          <div class="navbar-header">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#toggle-navbar" aria-controls="toggle-navbar" aria-expanded="false" aria-label="Toggle navigation">
+              <i class="fa-solid fa-bars text-white"></i>
+            </button>
+            <a class="navbar-brand" href="#">Dashboard</a>
+          </div>
+          <div class="collapse navbar-collapse" id="toggle-navbar">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Setting </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <a class="dropdown-item" href="#">My Account</a>
+                  <a class="dropdown-item" href="#">Help</a>
+                  <hr class="dropdown-divider" />
+                  <a class="dropdown-item" href="#">Log Out</a>
+                </div>
+              </li>
+              <li id="myButton" class="nav-item">
+                <a class="nav-link" href="#"><i class="fa-solid fa-comment-dots"></i><span>23</span></a>
+                <div id="myModal" class="modal">
+                  <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <p>Ini adalah konten dari modal.</p>
+                  </div>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"><i class="fa-solid fa-bell"></i><span>98</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"> </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <i data-show="show-side-navigation1" class="fa-solid fa-bars burger show-side-btn"></i>
+                  <i data-show="show-side-navigation1" class="menu show-side-btn">Menu</i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <div class="p-4">
+        <div class="welcome">
+          <div class="content p-3">
+            <h1 class="fs-3">Welcome to Dashboard</h1>
+            <p class="mb-0">Hello Adityamfu, welcome to your awesome dashboard!</p>
+          </div>
+        </div>
+        <section class="statistics mt-4">
+          <div class="row">
+            <div class="col-lg-4">
+              <div class="box d-flex">
+                <i class="uil-envelope-shield fs-5 text-center"></i>
+                <div class="ms-3 mb-2">
+                  <div class="d-flex align-items-center p-3">
+                    <h3 class="mb-0">1,245</h3>
+                    <span class="d-block ms-2">Emails</span>
+                  </div>
+                  <p class="fs-normal mb-0">Lorem ipsum dolor sit amet</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="box d-flex">
+                <i class="uil-file fs-5 text-center"></i>
+                <div class="ms-3 mb-2">
+                  <div class="d-flex align-items-center p-3">
+                    <h3 class="mb-0">34</h3>
+                    <span class="d-block ms-2">Projects</span>
+                  </div>
+                  <p class="fs-normal mb-0">Lorem ipsum dolor sit amet</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="box d-flex">
+                <i class="uil-users-alt fs-5 text-center"></i>
+                <div class="ms-3 mb-2">
+                  <div class="d-flex align-items-center p-3">
+                    <h3 class="mb-0">5,245</h3>
+                    <span class="d-block ms-2">Users</span>
+                  </div>
+                  <p class="fs-normal mb-0">Lorem ipsum dolor sit amet</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="charts mt-4">
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="chart-container p-3">
+                <h3 class="fs-6 mb-3">Chart title number one</h3>
+                <canvas id="myChart"></canvas>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="chart-container p-3">
+                <h3 class="fs-6 mb-3">Chart title number two</h3>
+                <canvas id="myChart2"></canvas>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="admins mt-4">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="box">
+                <h4>Admins:</h4>
+                <div class="admin d-flex align-items-center p-3 mb-4">
+                  <div class="img">
+                    <img class="img-fluid" width="75" height="75" src="" alt="admin" />
+                  </div>
+                  <div class="ms-3">
+                    <h3 class="fs-5 mb-1">Adityamfu</h3>
+                    <p class="mb-0">Lorem ipsum dolor sit amet consectetur elit.</p>
+                  </div>
+                </div>
+                <div class="admin d-flex align-items-center p-3 mb-4">
+                  <div class="img">
+                    <img class="img-fluid" width="75" height="75" src="" alt="admin" />
+                  </div>
+                  <div class="ms-3">
+                    <h3 class="fs-5 mb-1">Adityamfu</h3>
+                    <p class="mb-0">Lorem ipsum dolor sit amet consectetur elit.</p>
+                  </div>
+                </div>
+                <div class="admin d-flex align-items-center p-3 mb-4">
+                  <div class="img">
+                    <img class="img-fluid" width="75" height="75" src="" alt="admin" />
+                  </div>
+                  <div class="ms-3">
+                    <h3 class="fs-5 mb-1">Adityamfu</h3>
+                    <p class="mb-0">Lorem ipsum dolor sit amet consectetur elit.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="box">
+                <h4>Agenda:</h4>
+                <div class="admin d-flex align-items-center p-3 mb-4">
+                  <div class="img">
+                    <img class="img-fluid" width="75" height="75" src="" alt="admin" />
+                  </div>
+                  <div class="ms-3">
+                    <h3 class="fs-5 mb-1">CTF</h3>
+                    <p class="mb-0">Lorem ipsum dolor sit amet consectetur elit.</p>
+                  </div>
+                </div>
+                <div class="admin d-flex align-items-center p-3 mb-4">
+                  <div class="img">
+                    <img class="img-fluid" width="75" height="75" src="" alt="admin" />
+                  </div>
+                  <div class="ms-3">
+                    <h3 class="fs-5 mb-1">Desain Web</h3>
+                    <p class="mb-0">Lorem ipsum dolor sit amet consectetur elit.</p>
+                  </div>
+                </div>
+                <div class="admin d-flex align-items-center p-3">
+                  <div class="img">
+                    <img class="img-fluid" width="75" height="75" src="" alt="admin" />
+                  </div>
+                  <div class="ms-3">
+                    <h3 class="fs-5 mb-1">UI/UX</h3>
+                    <p class="mb-0">Lorem ipsum dolor sit amet consectetur elit.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="statis mt-4 text-center">
+          <div class="row">
+            <div class="col-md-6 col-lg-3 mb-4 mb-lg-0">
+              <div class="box bg-primary p-3">
+                <i class="uil-eye"></i>
+                <h3>154</h3>
+                <p class="lead">Admin</p>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3 mb-4 mb-lg-0">
+              <div class="box bg-danger p-3">
+                <i class="uil-user"></i>
+                <h3>545</h3>
+                <p class="lead">User</p>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3 mb-4 mb-md-0">
+              <div class="box bg-warning p-3">
+                <i class="uil-shopping-cart"></i>
+                <h3>20</h3>
+                <p class="lead">Pengawas</p>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <div class="box bg-success p-3">
+                <i class="uil-feedback"></i>
+                <h3>2</h3>
+                <p class="lead">Laporan</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- <button onclick="showNotification()">Klik untuk notifikasi</button> -->
+        <section class="charts mt-4">
+          <div class="chart-container p-3">
+            <h3 class="fs-6 mb-3">Chart title number three</h3>
+            <div style="height: 300px">
+              <canvas id="chart3" width="100%"></canvas>
+            </div>
+          </div>
+        </section>
+      </div>
+    </section>
+    <!-- create a form to send message -->
+    <form onsubmit="return sendMessage();">
+      <input id="message" placeholder="Enter message" autocomplete="off" />
+
+      <input type="submit" />
+    </form>
+    <!-- create a list -->
+    <ul id="messages"></ul>
+
+    <script>
+      const myButton = document.querySelector('#myButton');
+      const modal = document.querySelector('#myModal');
+      const closeBtn = document.querySelector('.close');
+
+      myButton.addEventListener('click', function () {
+        modal.style.display = 'block';
+      });
+
+      closeBtn.addEventListener('click', function () {
+        modal.style.display = 'none';
+      });
+
+      window.addEventListener('click', function (event) {
+        if (event.target == modal) {
+          modal.style.display = 'none';
+        }
+      });
+    </script>
+    <!-- <script>
+      function showNotification() {
+        // Mengecek apakah browser mendukung notifikasi
+        if ('Notification' in window) {
+          // Meminta izin ke Browser
+          Notification.requestPermission().then(function (permission) {
+            // Tampilkan notifikasi
+            if (permission === 'granted') {
+              var notification = new Notification('Notifikasi', {
+                body: 'Ini adalah contoh notifikasi!',
+                icon: 'https://via.placeholder.com/50',
+              });
+            }
+          });
+        } else {
+          // Tampilkan pesan error
+          alert('Browser Anda tidak mendukung notifikasi!');
+        }
+      }
+    </script> -->
+    <script>
+      const myDiv = document.querySelector('#myDiv');
+
+      myDiv.addEventListener('click', function () {
+        alert('Berhasil Log Out!');
+      });
+    </script>
+    <script>
+      const navbarToggler = document.querySelector('.navbar-toggler');
+      const toggleNavbar = document.querySelector('.collapse');
+
+      navbarToggler.addEventListener('click', function () {
+        toggleNavbar.classList.toggle('show');
+        if (toggleNavbar.classList.contains('show')) {
+          toggleNavbar.style.maxHeight = toggleNavbar.scrollHeight + 'px';
+          toggleNavbar.style.transition = 'max-height 0.3s ease-in-out';
+        } else {
+          toggleNavbar.style.maxHeight = 0;
+          toggleNavbar.style.transition = 'max-height 0.3s ease-in-out';
+        }
+      });
+    </script>
+    <script>
+      const icon = document.querySelector('.icon-container i');
+
+      icon.addEventListener('mouseenter', () => {
+        icon.classList.replace('fa-folder', 'fa-folder-open');
+      });
+
+      icon.addEventListener('mouseleave', () => {
+        icon.classList.replace('fa-folder-open', 'fa-folder');
+      });
+    </script>
+    <script src="https://chat-df7bc-default-rtdb.firebaseio.com/"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.jshttps://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.bundle.js"></script>
+    <script src="./dashboard.js"></script>
+    <script src="./api.js"></script>
+  </body>
+</html>
